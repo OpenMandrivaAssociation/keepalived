@@ -1,6 +1,6 @@
 %define name    keepalived
 %define version 1.1.17
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name: %{name}
 Version: %{version}
@@ -31,7 +31,7 @@ healthchecks and LVS directors failover.
 %setup
 
 %build
-%configure 
+%configure2_5x
 %make
 
 %install
