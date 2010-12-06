@@ -1,6 +1,6 @@
 %define name    keepalived
 %define version 1.1.17
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name: %{name}
 Version: %{version}
