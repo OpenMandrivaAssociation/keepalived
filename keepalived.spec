@@ -1,6 +1,6 @@
 %define name    keepalived
-%define version 1.1.17
-%define release %mkrel 3
+%define version 1.2.2
+%define release %mkrel 0
 
 Name: %{name}
 Version: %{version}
@@ -9,7 +9,7 @@ Summary: HA monitor built upon LVS, VRRP and services poller
 License: GPL
 Group: System/Cluster 
 URL: http://www.keepalived.org/
-Source0: %{name}_%{version}.tar.gz
+Source0: %{name}-%{version}.tar.gz
 BuildRequires: openssl-devel
 BuildRequires: libpopt-devel
 BuildRequires: kernel-devel
