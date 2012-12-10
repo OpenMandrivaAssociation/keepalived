@@ -1,6 +1,7 @@
+%define debug_package	%nil
 %define name    keepalived
-%define version 1.2.2
-%define release %mkrel 0
+%define version 1.2.7
+%define release %mkrel 1
 
 Name: %{name}
 Version: %{version}
@@ -9,11 +10,10 @@ Summary: HA monitor built upon LVS, VRRP and services poller
 License: GPL
 Group: System/Cluster 
 URL: http://www.keepalived.org/
-Source0: %{name}-%{version}.tar.gz
-BuildRequires: openssl-devel
-BuildRequires: libpopt-devel
+Source0: http://www.keepalived.org/software/%{name}-%{version}.tar.gz
+BuildRequires: pkgconfig(openssl)
+BuildRequires: pkgconfig(popt)
 BuildRequires: kernel-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 The main goal of the keepalived project is to add a strong & robust keepalive
@@ -35,7 +35,6 @@ healthchecks and LVS directors failover.
 %make
 
 %install
-rm -rf %{buildroot}
 %{makeinstall_std}
 # Remove "samples", as we include them in %%doc
 rm -rf %{buildroot}%{_sysconfdir}/%{name}/samples/
@@ -45,9 +44,6 @@ rm -rf %{buildroot}%{_sysconfdir}/%{name}/samples/
 
 %preun 
 %_preun_service %{name}
-
-%clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, 0755)
@@ -62,4 +58,3 @@ rm -rf %{buildroot}
 %{_mandir}/man1/genhash.1*
 %{_mandir}/man5/keepalived.conf.5*
 %{_mandir}/man8/keepalived.8*
-
