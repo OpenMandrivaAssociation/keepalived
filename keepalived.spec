@@ -1,7 +1,7 @@
 %define debug_package	%nil
 %define name    keepalived
 %define version 1.2.7
-%define release %mkrel 1
+%define release 2
 
 Name: %{name}
 Version: %{version}
