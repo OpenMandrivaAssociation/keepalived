@@ -9,7 +9,7 @@ Release:	1
 Summary: HA monitor built upon LVS, VRRP and services poller
 License: GPL
 Group: System/Cluster 
-URL: http://www.keepalived.org/
+URL: https://www.keepalived.org/
 Source0: http://www.keepalived.org/software/%{name}-%{version}.tar.gz
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(popt)
