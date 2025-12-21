@@ -11,6 +11,11 @@ License: GPL
 Group: System/Cluster 
 URL: https://www.keepalived.org/
 Source0: http://www.keepalived.org/software/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(openssl)
 BuildRequires: pkgconfig(popt)
 BuildRequires: kernel-devel
