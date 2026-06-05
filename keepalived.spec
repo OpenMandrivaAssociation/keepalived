@@ -5,7 +5,7 @@
 
 Name: %{name}
 Version: %{version}
-Release:	1
+Release:	2
 Summary: HA monitor built upon LVS, VRRP and services poller
 License: GPL
 Group: System/Cluster 
