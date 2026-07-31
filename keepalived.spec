@@ -1,11 +1,11 @@
 %define debug_package	%nil
 %define name    keepalived
-%define version 1.2.7
+%define version 2.4.3
 %define release 2
 
 Name: %{name}
 Version: %{version}
-Release:	2
+Release:	1
 Summary: HA monitor built upon LVS, VRRP and services poller
 License: GPL
 Group: System/Cluster 
